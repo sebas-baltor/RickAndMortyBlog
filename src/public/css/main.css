@@ -20,7 +20,7 @@
     object-fit: cover;
 }
 .bg-glassmorphism{
-    background: linear-gradient(45deg,rgba(4, 181, 251, 0.199),rgba(139, 43, 236, 0.185),rgba(254, 110, 254, 0.199),rgb(246,229,172,0.199),rgb(184,227,238,0.199),rgb(45,97,251,0.199));
+    background: linear-gradient(45deg,rgba(4, 181, 251, 0.3),rgba(139, 43, 236, 0.3),rgba(254, 110, 254, 0.3),rgb(246,229,172,0.3),rgb(184,227,238,0.3),rgb(45,97,251,0.3));
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
 }

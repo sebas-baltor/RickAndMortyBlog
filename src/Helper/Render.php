@@ -18,7 +18,7 @@
         }
         function RenderChapter($episode,$characters){
             $consumer = new ApiConsumer;
-            echo '<article class="col rounded p-5 mt-5 shadow">';
+            echo '<article class="col rounded p-5 mt-5 shadow bg-secondary bg-opacity-10">';
             echo "<h2>Capitulo #{$episode->id}</h2>";
                     echo "<h2 class='text-center mb-2'>\"{$episode->name}\"</h2>";
                     echo "<p class ='text-end'><b>{$episode->episode}</b> {$episode->air_date}</p>";
