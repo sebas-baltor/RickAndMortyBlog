@@ -1,0 +1,30 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Albert Sans', sans-serif;
+}
+.title{
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+.nav-logo{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.bg-glassmorphism{
+    background: linear-gradient(45deg,rgba(4, 181, 251, 0.199),rgba(139, 43, 236, 0.185),rgba(254, 110, 254, 0.199),rgb(246,229,172,0.199),rgb(184,227,238,0.199),rgb(45,97,251,0.199));
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+
+
+
