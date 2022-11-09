@@ -4,12 +4,10 @@
  require("./src/Helper/Render.php");
  $consumer = new ApiConsumer;
  $render = new Render;
- $pageId; //ayudara a que pidamos una pagina u otra
+ $pageId = 1; //ayudara a que pidamos una pagina u otra
     if(isset($_GET['nextPage'])){ //vamos por una pagina despues
         $pageId = $_GET['nextPage']+=1;
-    }else{
-        $pageId = 1;
-    } 
+    }
     if(isset($_GET['pageBack'])){// vamos por una pagina anterior
         $pageId = $_GET['pageBack']-=1;
     }

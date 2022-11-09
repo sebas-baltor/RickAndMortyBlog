@@ -4,12 +4,10 @@
     require("./src/Helper/Render.php");
     $consumer = new ApiConsumer;
     $render = new Render;
-    $chapterId; //ayudara a que pidamos un capitulo u otro
+    $chapterId = 1; //ayudara a que pidamos un capitulo u otro
     if(isset($_GET['nextChapter'])){ //vamos por un capitulo despues
         $chapterId = $_GET['nextChapter']+=1;
-    }else{
-        $chapterId = 1;
-    } 
+    }
     if(isset($_GET['chapterBack'])){// vamos por un capitulo anterior
         $chapterId = $_GET['chapterBack']-=1;
     }
