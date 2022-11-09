@@ -18,11 +18,11 @@
         }
         function RenderChapter($episode,$characters){
             $consumer = new ApiConsumer;
-            echo '<article class="col rounded p-5 mt-5 shadow bg-secondary bg-opacity-10">';
+            echo '<article class="col rounded p-5 mt-5 shadow bg-secondary bg-opacity-10" style="min-width:300px">';
             echo "<h2>Capitulo #{$episode->id}</h2>";
                     echo "<h2 class='text-center mb-2'>\"{$episode->name}\"</h2>";
                     echo "<p class ='text-end'><b>{$episode->episode}</b> {$episode->air_date}</p>";
-                    echo "<div class='container d-flex flex-wrap justify-content-between p-0 mx-0'>";
+                    echo "<div class='container d-flex flex-wrap justify-content-center justify-content-sm-center p-0 mx-0'>";
                     foreach($characters as $character){
                         $res = $consumer->Get($character);
                         $this->RenderCharacter($res);

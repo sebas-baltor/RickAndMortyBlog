@@ -1,5 +1,4 @@
 <?php
-
     require("./src/partials/head.php");
     require("./src/Helper/ApiConsumer.php");
     require("./src/Helper/Render.php");
@@ -12,12 +11,9 @@
             <img class="position-absolute top-50 start-50 translate-middle-x" src="./src/public/img/text_logo.png" alt="texto rick and morty" width="300px" style="filter:grayscale(100%) saturate(50%) contrast(175%);">
             <h1 class="text-center title">Blog</h1>
         </div>
-        <div class="row">
-            <?php
-                $render->RenderChapter($res,$res->characters);
-            ?>
-            <div class="col-3 ms-4">
-                <aside class="pb-5 mt-5 d-flex flex-column flex-wrap align-items-center shadow rounded bg-secondary bg-opacity-10">
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div style="min-width: 200px;">
+                <aside class="pb-5 mt-5 mr-4 d-flex flex-column flex-wrap align-items-center justify-content-center shadow rounded bg-secondary bg-opacity-10">
                     <h2 class="mb-3 mt-5">Personajes</h2>
                     <?php
                         for($i = 0;$i<3;$i++){
@@ -28,6 +24,9 @@
                     ?>
                 </aside>
             </div>
+            <?php
+                $render->RenderChapter($res,$res->characters);
+            ?>
         </div>
 </div>
 <?php

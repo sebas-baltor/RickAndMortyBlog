@@ -13,38 +13,45 @@
     if(isset($_GET['pageBack'])){// vamos por una pagina anterior
         $pageId = $_GET['pageBack']-=1;
     }
-        echo "<h1 class='text-center title'>Personajes</h1>";
-        $data = $consumer->Get("https://rickandmortyapi.com/api/character/?page={$pageId}");
-        
-        echo "<div class='container'>
-                <div class='row'>
-                <div class='col'>";
-                if($pageId != 1){
-                    echo "
+?>
+<h1 class='text-center title'>Personajes</h1>
+    <?php
+    $data = $consumer->Get("https://rickandmortyapi.com/api/character/?page={$pageId}");
+    ?>
+<div class='container'>
+    <div class='row'>
+        <div class='col'>
+        <?php
+            if($pageId != 1){
+                echo "
                     <form  class='d-flex justify-conteent-between' action='personajes.php' method='GET'>
-                    <button class='btn btn-dark' name='pageBack' value={$pageId} type='submit'>pagina anterior</button>
+                        <button class='btn btn-dark' name='pageBack' value={$pageId} type='submit'>pagina anterior</button>
                     </form>";
-                }
-                echo"</div>
-                <div class='col d-flex flex-row-reverse'>";
-                if($pageId !=42){
-                    echo"
+            }
+        ?>
+        </div>
+        <div class='col d-flex flex-row-reverse'>
+        <?php
+            if($pageId !=42){
+                echo"
                     <form  class='d-flex justify-conteent-between' action='personajes.php' method='GET'>
-                    <button class='btn btn-dark' name='nextPage' value={$pageId} type='submit'>pagina siguiente</button>
+                        <button class='btn btn-dark' name='nextPage' value={$pageId} type='submit'>pagina siguiente</button>
                     </form>";
-                }
-                echo "</div>
-                </div>
-            ";
-        echo "<h2 class='mb-3 text-center'>Pagina {$pageId}</h2> 
-        </div>";
-        
-        echo "<div class='container d-flex flex-wrap mt-5 p-2 rounded'>";
+            }
+        ?>
+        </div>
+    </div>
+        <?php
+            echo "<h2 class='mb-3 mt-3 text-center'>Pagina {$pageId}</h2>"; 
+        ?>
+</div>
+<div class='container d-flex flex-wrap justify-content-center mt-5 p-2 rounded'>
+    <?php 
         foreach($data->results as $character){
             $render->RenderCharacter($character);
         }
-        echo "</div>";
-        echo "
-        ";
-
+    ?>
+</div>
+<?php
  require("./src/partials/footer.php");
+ ?>

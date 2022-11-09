@@ -13,32 +13,38 @@
     if(isset($_GET['chapterBack'])){// vamos por un capitulo anterior
         $chapterId = $_GET['chapterBack']-=1;
     }
-
-    echo "<h1 class='text-center title'>Capitulos</h1>";
-    echo "<div class='container d-grid gap-3 bg-light mt-5 p-2 rounded'>";
+?>
+<h1 class='text-center title'>Capitulos</h1>
+<div class='container d-grid gap-3 bg-light mt-5 p-2 rounded'>
+    <?php
     $data = $consumer->Get("https://rickandmortyapi.com/api/episode/{$chapterId}");
-    echo "<div class='row'>
-            <div class='col'>";
+    ?>
+    <div class='row'>
+        <div class='col'>
+                <?php
             if($chapterId != 1){
                 echo "
                     <form  class='d-flex justify-conteent-between' action='capitulos.php' method='GET'>
                         <button class='btn btn-dark' name='chapterBack' value={$chapterId} type='submit'>capitulo anterior</button>
                     </form>";
             }
-        echo"</div>
-            <div class='col d-flex flex-row-reverse'>";
+            ?>
+        </div>
+        <div class='col d-flex flex-row-reverse'>
+            <?php
             if($chapterId !=51){
                 echo"
                     <form  class='d-flex justify-conteent-between' action='capitulos.php' method='GET'>
                         <button class='btn btn-dark' name='nextChapter' value={$chapterId} type='submit'>capitulo siguiente</button>
                     </form>";
             }
-        echo "</div>
-        </div>";
-
-    $render->RenderChapter($data,$data->characters);
-
-    echo "</div>";
-          
-   
+            ?>
+        </div>
+    </div>
+    <?php
+        $render->RenderChapter($data,$data->characters);
+    ?>
+</div>;      
+<?php
     require("./src/partials/footer.php");
+?>

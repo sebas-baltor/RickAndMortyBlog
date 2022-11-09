@@ -18,7 +18,10 @@
                 <a href="https://rickandmortyapi.com/" class="navbar-brand" target="_blank">
                     <img class="nav-logo" src="src/public/img/logo.jpg" alt="api rick and morty">
                 </a>
-                <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="navbar-item"><a class="btn btn-dark rounded-pill" href="index.php">Home</a></li>
                         <li class="navbar-item"><a class="nav-link" href="personajes.php">Personajes</a></li>
