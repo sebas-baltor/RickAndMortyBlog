@@ -38,7 +38,7 @@
         </div>
     </div>
         <?php
-            echo "<h2 class='mb-3 mt-3 text-center'>\"Pagina {$pageId}\"</h2>"; 
+            echo "<h2 class='mb-3 mt-5 text-center'>\"Pagina {$pageId}\"</h2>"; 
         ?>
 </div>
 <div class='container d-flex flex-wrap justify-content-center mt-5 p-2 rounded'>
