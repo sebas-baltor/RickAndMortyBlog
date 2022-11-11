@@ -13,7 +13,7 @@
     }
 ?>
 <h1 class='text-center title'>Capitulos</h1>
-<div class='container d-grid gap-3 bg-light mt-5 p-2 rounded'>
+<div class='container mt-5 p-2 rounded'>
     <?php
     $data = $consumer->Get("https://rickandmortyapi.com/api/episode/{$chapterId}");
     ?>

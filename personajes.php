@@ -11,12 +11,10 @@
     if(isset($_GET['pageBack'])){// vamos por una pagina anterior
         $pageId = $_GET['pageBack']-=1;
     }
+    $data = $consumer->Get("https://rickandmortyapi.com/api/character/?page={$pageId}");
 ?>
 <h1 class='text-center title'>Personajes</h1>
-    <?php
-    $data = $consumer->Get("https://rickandmortyapi.com/api/character/?page={$pageId}");
-    ?>
-<div class='container'>
+<div class='container mt-5'>
     <div class='row'>
         <div class='col'>
         <?php
@@ -40,7 +38,7 @@
         </div>
     </div>
         <?php
-            echo "<h2 class='mb-3 mt-3 text-center'>Pagina {$pageId}</h2>"; 
+            echo "<h2 class='mb-3 mt-3 text-center'>\"Pagina {$pageId}\"</h2>"; 
         ?>
 </div>
 <div class='container d-flex flex-wrap justify-content-center mt-5 p-2 rounded'>
